@@ -13,11 +13,8 @@ namespace SportApp
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(AddNewBikeWorkountPage), typeof(AddNewBikeWorkountPage));
         }
 
-        private async void OnMenuItemClicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("//LoginPage");
-        }
     }
 }

@@ -9,14 +9,10 @@ namespace SportApp.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Достижения";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
-            ShowMessage = new Command(async () => await Browser.OpenAsync("https://tcmk74.ru"));
         }
 
-
-
-        public ICommand ShowMessage { get; }
         public ICommand OpenWebCommand { get; }
     }
 }

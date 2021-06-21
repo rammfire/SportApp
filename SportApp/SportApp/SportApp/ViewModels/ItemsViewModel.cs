@@ -19,7 +19,7 @@ namespace SportApp.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Обзор занятий";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
