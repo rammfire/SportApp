@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SportApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CiclingPage : ContentPage
+    public partial class AnthropometryView : ContentPage
     {
-        public CiclingPage()
+        public AnthropometryView()
         {
             InitializeComponent();
         }

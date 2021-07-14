@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Xamarin.Forms;
 using SportApp.ViewModels;
 using SportApp.Views;
-using Xamarin.Forms;
 
 namespace SportApp
 {
@@ -11,9 +11,7 @@ namespace SportApp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            Routing.RegisterRoute(nameof(AddNewBikeWorkountPage), typeof(AddNewBikeWorkountPage));
+            Routing.RegisterRoute(nameof(AnthropometryView), typeof(AnthropometryView));
         }
 
     }

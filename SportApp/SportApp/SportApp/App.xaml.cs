@@ -1,6 +1,4 @@
 ﻿using System;
-using SportApp.Services;
-using SportApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,8 +10,6 @@ namespace SportApp
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
