@@ -51,9 +51,24 @@ namespace SportApp.ViewModels
             }
         }
 
+        public void Deserialize()
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Person));
+            Person pers = new Person();
+
+            using (StreamReader sr = new StreamReader("/storage/emulated/0/Android/data/com.companyname.sportapp/cache/persons.xml"))
+            {
+                pers = xmlSerializer.Deserialize(sr) as Person;
+                Wrist = pers.Wrist; Forearm = pers.Forearm; Biceps = pers.Biceps;
+                Neck = pers.Neck; ShoulderGirdle = pers.ShoulderGirdle; Chest = pers.Chest;
+                Abdomen = pers.Abdomen; Pelvis = pers.Pelvis; Hips = pers.Hips; Ankles = pers.Ankles;
+            }
+        }
+
         public AnthropometryModelView()
         {
             SaveCommand = new Command(Serialize);
+            Deserialize();
         }
     }
 }

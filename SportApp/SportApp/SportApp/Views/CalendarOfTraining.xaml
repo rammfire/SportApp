@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportApp.Views.CalendarOfTraining"
+             xmlns:local="clr-namespace:SportApp.ViewModels">
+    
+    <ContentPage.BindingContext>
+        <local:TrainingViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="ColorItemTemplate">
+            <Grid Margin="5"
+                  HeightRequest="120"
+                  WidthRequest="105">
+                <BoxView Color="Azure" />
+                <Label Text="{Binding DayOfTraining}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+    <StackLayout Margin="10">
+        <Label Text="Список тренировок"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Label Text="{Binding PowerTrainings.Count, StringFormat='Количество проведённых тренировок: {0}'}" />
+        <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                     RefreshColor="Teal"
+                     Command="{Binding RefreshCommand}">
+            <ScrollView>
+                <FlexLayout Direction="Row"
+                            Wrap="Wrap"
+                            AlignItems="Center"
+                            AlignContent="Center"
+                            BindableLayout.ItemsSource="{Binding PowerTrainings}"
+                            BindableLayout.ItemTemplate="{StaticResource ColorItemTemplate}" />
+            </ScrollView>
+        </RefreshView>
+    </StackLayout>
+</ContentPage>
+
+<!--<CollectionView ItemsSource="{Binding PowerTrainings}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"
+                        Text="{Binding DayOfTraining}"
+                       FontAttributes="Bold" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
