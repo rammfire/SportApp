@@ -7,7 +7,7 @@ namespace SportApp.Models
     /// Класс описывает антропометрию
     /// </summary>
     [XmlRoot("Person")]
-    class Person
+    public class Person
     {
         /// <summary>
         /// Запястья
