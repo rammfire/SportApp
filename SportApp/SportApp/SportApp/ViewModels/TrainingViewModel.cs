@@ -5,6 +5,8 @@ namespace SportApp.ViewModels
 {
     public class TrainingViewModel : BaseModelView
     {
+        string _tabIndex;
+        public string TabIndex { get { return _tabIndex; } set { _tabIndex = value; OnPropertyChanged(); } }
         string dateTime = DateTime.Now.ToString("U");
         ObservableCollection<PowerTraining> powerTrainings;
 

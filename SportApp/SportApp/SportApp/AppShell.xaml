@@ -30,8 +30,8 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Я" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AnthropometryView}" />
-        <ShellContent Title="Тренировки" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:CalendarOfTraining}" />
+        <ShellContent Title="i" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AnthropometryView}" />
+        <ShellContent Title="Collection" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:CalendarOfTraining}" />
     </TabBar>
 
     <!--
