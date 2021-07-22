@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -7,7 +8,7 @@ using Xamarin.Forms;
 
 namespace SportApp.Models
 {
-    public class PowerTraining
+    public class PowerTraining : BaseModelView
     {
         public string DayOfTraining { get; set; }
     }

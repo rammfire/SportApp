@@ -18,8 +18,8 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
 
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding TypeListSelectedCommand, Source={x:Reference FlexLayout}}"/>
+                <Frame.GestureRecognizers >
+                    <TapGestureRecognizer Command="{Binding BindingContext.TypeListSelectedCommand, Source={x:Reference flexLayout}}" CommandParameter="{Binding}"></TapGestureRecognizer>
                 </Frame.GestureRecognizers>
             </Frame>
         </DataTemplate>
