@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportApp.Views.AnthropometryView"
+             xmlns:local="clr-namespace:SportApp.ViewModels">
+    
+    <ContentPage.BindingContext>
+        <local:AnthropometryModelView/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid BackgroundColor="AliceBlue" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Заполните информацию о себе"/>
+            <ScrollView  Grid.Row="1">
+                <StackLayout BackgroundColor="Ivory">
+                    <Label Text="Запястья"/>
+                    <Entry Text="{Binding Wrist}" Keyboard="Numeric"/>
+                    <Label Text="Предплечья"/>
+                    <Entry Text="{Binding Forearm}" Keyboard="Numeric"/>
+                    <Label Text="Бицепс"/>
+                    <Entry Text="{Binding Biceps}" Keyboard="Numeric"/>
+                    <Label Text="Шея"/>
+                    <Entry Text="{Binding Neck}" Keyboard="Numeric"/>
+                    <Label Text="Плечевой пояс"/>
+                    <Entry Text="{Binding ShoulderGirdle}" Keyboard="Numeric"/>
+                    <Label Text="Грудь"/>
+                    <Entry Text="{Binding Chest}" Keyboard="Numeric"/>
+                    <Label Text="Живот"/>
+                    <Entry Text="{Binding Abdomen}" Keyboard="Numeric"/>
+                    <Label Text="Таз"/>
+                    <Entry Text="{Binding Pelvis}" Keyboard="Numeric"/>
+                    <Label Text="Бедро"/>
+                    <Entry Text="{Binding Hips}" Keyboard="Numeric"/>
+                    <Label Text="Лодыжки"/>
+                    <Entry Text="{Binding Ankles}" Keyboard="Numeric"/>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Grid.Row="2">
+                <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
